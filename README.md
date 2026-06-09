@@ -104,11 +104,29 @@ http://localhost:3000
 
 ## API Endpoints
 
+Public base URL:
+
+```text
+https://github-profile-analyzer-api-production-3940.up.railway.app
+```
+
+Local base URL:
+
+```text
+http://localhost:3000
+```
+
 ### Health Check
 
-`GET /api/`
+`GET /`
 
 Returns a simple status message.
+
+Public example:
+
+```bash
+curl https://github-profile-analyzer-api-production-3940.up.railway.app/
+```
 
 ### Analyze GitHub Profile
 
@@ -124,11 +142,23 @@ Example:
 curl -X POST http://localhost:3000/api/analyze/octocat
 ```
 
+Public example:
+
+```bash
+curl -X POST https://github-profile-analyzer-api-production-3940.up.railway.app/api/analyze/octocat
+```
+
 ### Get All Stored Profiles
 
 `GET /api/profiles`
 
 Returns all analyzed profiles from the database.
+
+Public example:
+
+```bash
+curl https://github-profile-analyzer-api-production-3940.up.railway.app/api/profiles
+```
 
 ### Get Profile by Username
 
@@ -142,10 +172,17 @@ Example:
 curl http://localhost:3000/api/profiles/octocat
 ```
 
+Public example:
+
+```bash
+curl https://github-profile-analyzer-api-production-3940.up.railway.app/api/profiles/octocat
+```
+
 ## Deployment
 
 This project is deployed on Railway with the following setup:
 
+- Public API URL: `https://github-profile-analyzer-api-production-3940.up.railway.app`
 - Railway Node.js deployment
 - Railway MySQL plugin for database storage
 - Environment variables configured in Railway
